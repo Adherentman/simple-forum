@@ -1,14 +1,11 @@
 import * as Koa from 'koa';
 import * as mongoose from 'mongoose';
-<<<<<<< HEAD
 
 import { Kitten } from './models/kitten';
-=======
 import * as koaRouter from 'koa-router';
 import * as koaBody from 'koa-bodyparser';
 import { graphiqlKoa } from 'apollo-server-koa';
 
->>>>>>> e70f93286abc94ca1e4a5262ebbe82e572c6a891
 import env from './env';
 
 const app = new Koa();
@@ -26,15 +23,11 @@ router.get('/graphql',
 
 app.use(router.routes());
 app.use(router.allowedMethods());
-app.listen(port);
-
-console.log("Server is running at port " + port);
 
 //连接mongodb
 mongoose.connect(env.MongoDbUrl);
 let db = mongoose.connection;
 
-<<<<<<< HEAD
 //未连接上会报error
 db.on('error', function(error){
   console.log(error);
@@ -59,11 +52,3 @@ Kitten.find((err, kittens) => {
 
 app.listen(port);
 console.log("Server is running at port " + port );
-=======
-db.on('error', function (error) {
-  console.log(error);
-});
-db.on('connected', function () {
-  console.log('Mongoose connection open to ' + env.MongoDbUrl);
-});  
->>>>>>> e70f93286abc94ca1e4a5262ebbe82e572c6a891
