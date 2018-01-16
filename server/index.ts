@@ -4,7 +4,8 @@ import * as mongoose from 'mongoose';
 import { Kitten } from './models/kitten';
 import * as koaRouter from 'koa-router';
 import * as koaBody from 'koa-bodyparser';
-import { graphiqlKoa } from 'apollo-server-koa';
+import { graphiqlKoa, graphqlKoa } from 'apollo-server-koa';
+import { makeExecutableSchema } from 'graphql-tools';
 
 import env from './env';
 
@@ -13,16 +14,8 @@ const router = new koaRouter();
 
 const port: number = 8888;
 
+// koaBody 仅在POST的时候需要.
 app.use(koaBody());
-
-router.get('/graphql',
-  graphiqlKoa({
-    endpointURL: '/graphql'
-  }
-  ));
-
-app.use(router.routes());
-app.use(router.allowedMethods());
 
 //连接mongodb
 mongoose.connect(env.MongoDbUrl);
@@ -49,6 +42,48 @@ Kitten.find((err, kittens) => {
   if(err) console.error(err);
   console.log(kittens);
 })
+
+const books = [
+  {
+    title: "Harry Potter and the Sorcerer's stone",
+    author: 'J.K. Rowling',
+  },
+  {
+    title: 'Jurassic Park',
+    author: 'Michael Crichton',
+  },
+];
+// The GraphQL schema in string form
+const typeDefs = `
+  type Query { books: [Book] }
+  type Book { title: String, author: String }
+`;
+
+// The resolvers
+const resolvers = {
+  Query: { books: () => books },
+};
+
+// Put together a schema
+const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers,
+});
+
+router.get('/graphql', graphqlKoa({ schema }));
+
+router.get('/graphiql',
+  graphiqlKoa({
+    endpointURL: '/graphql'
+  }
+));
+
+router.get('/404', async (ctx) => {
+  ctx.body = '404!!!'
+});
+
+// 加载koa路由中间件
+app.use(router.routes()).use(router.allowedMethods());
 
 app.listen(port);
 console.log("Server is running at port " + port );
