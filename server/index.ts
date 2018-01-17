@@ -10,6 +10,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 import env from './env';
 
 const app = new Koa();
+
 const router = new koaRouter();
 
 const port: number = 8888;
@@ -70,8 +71,7 @@ const schema = makeExecutableSchema({
   resolvers,
 });
 
-router.get('/graphql', graphqlKoa({ schema }));
-
+router.post('/graphql', graphqlKoa({ schema }));
 router.get('/graphiql',
   graphiqlKoa({
     endpointURL: '/graphql'
