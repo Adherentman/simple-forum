@@ -13,7 +13,7 @@ const app = new Koa();
 
 const router = new koaRouter();
 
-const port: number = 8888;
+const port: number = 8088;
 
 // koaBody 仅在POST的时候需要.
 app.use(koaBody());
@@ -33,16 +33,17 @@ db.on('connected', function () {
 
 //Model(模型)创造Entity(实体)
 //Entity可对数据库操作造成影响但是Model比Entity更具操作性
-const fluffy = new Kitten({ name: 'Slicence' });
-fluffy.save((err, fluffy) => {
-  if(err) console.error(err);
-  fluffy.speak();
-})
 
-Kitten.find((err, kittens) => {
-  if(err) console.error(err);
-  console.log(kittens);
-})
+// const fluffy = new Kitten({ name: 'Slicence' });
+// fluffy.save((err, fluffy) => {
+//   if(err) console.error(err);
+//   fluffy.speak();
+// })
+
+// Kitten.find((err, kittens) => {
+//   if(err) console.error(err);
+//   console.log(kittens);
+// })
 
 const books = [
   {
@@ -72,6 +73,7 @@ const schema = makeExecutableSchema({
 });
 
 router.post('/graphql', graphqlKoa({ schema }));
+
 router.get('/graphiql',
   graphiqlKoa({
     endpointURL: '/graphql'

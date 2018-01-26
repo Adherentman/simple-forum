@@ -12,7 +12,6 @@
     "types": ["jasmine"],                           /* Type declaration files to be included in compilation. */
   },
   "exclude": [
-        "bld",
         "node_modules"
     ]
 }
