@@ -23,12 +23,12 @@ mongoose.connect(env.MongoDbUrl);
 let db = mongoose.connection;
 
 //未连接上会报error
-db.on('error', function(error){
+db.on('error', function (error) {
   console.log(error);
 });
-db.on('connected', function () {    
-  console.log('Mongoose connection open to ' + env.MongoDbUrl);  
-});  
+db.on('connected', function () {
+  console.log('Mongoose connection open to ' + env.MongoDbUrl);
+});
 
 
 //Model(模型)创造Entity(实体)
@@ -40,12 +40,26 @@ db.on('connected', function () {
 //   fluffy.speak();
 // })
 
-// Kitten.find((err, kittens) => {
-//   if(err) console.error(err);
-//   console.log(kittens);
-// })
 
-router.post('/graphql', graphqlKoa({ schema }));
+class Kittend {
+  findKittend: any;
+  constructor() {
+    this.findKittend = (name: any) => {
+      const kittena = Kitten.find({ name }, (err, data) => {
+        return data;
+      });
+      return kittena;
+    }
+  }
+}
+
+router.post('/graphql', graphqlKoa({
+  schema,
+  context: {
+    connectors: Kittend
+    }
+  })
+);
 
 router.get('/graphiql',
   graphiqlKoa({
@@ -61,4 +75,4 @@ router.get('/404', async (ctx) => {
 app.use(router.routes()).use(router.allowedMethods());
 
 app.listen(port);
-console.log("Server is running at port " + port );
+console.log("Server is running at port " + port);
