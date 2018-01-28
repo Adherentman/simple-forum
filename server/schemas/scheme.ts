@@ -7,12 +7,13 @@ const typeDefs = `
     books: [Book] 
   }
   type Book { 
-    title: String, author: String 
+    title: String
+    author: String 
   }
 `;
 
 // Put together a schema
-const schema = makeExecutableSchema({
+export const schema = makeExecutableSchema({
   typeDefs,
   resolvers,
 });
