@@ -40,14 +40,3 @@ app.use(router.routes()).use(router.allowedMethods());
 
 app.listen(port);
 console.log("Server is running at port " + port);
-
-
-
-//Model(模型)创造Entity(实体)
-//Entity可对数据库操作造成影响但是Model比Entity更具操作性
-
-// const fluffy = new Kitten({ name: 'Slicence' });
-// fluffy.save((err, fluffy) => {
-//   if(err) console.error(err);
-//   fluffy.speak();
-// })

@@ -1,17 +1,6 @@
 import * as MongoClient from 'mongodb';
 import env from '../env';
 import { find } from 'lodash';
-// const books = [
-//   {
-//     title: "Harry Potter and the Sorcerer's stone",
-//     author: 'J.K. Rowling',
-//   },
-//   {
-//     title: 'Jurassic Park',
-//     author: 'Michael Crichton',
-//   },
-// ];
-// The resolvers
 
 const myMongoDb = new Promise((resolve, reject) => {
   MongoClient.connect(env.MongoDbUrl, async (err: any, database: any) => {
@@ -20,6 +9,7 @@ const myMongoDb = new Promise((resolve, reject) => {
   })
 });
 
+// The resolvers
 export const resolvers = {
   Query: {
     // books: () => new Promise((res, rej) => {

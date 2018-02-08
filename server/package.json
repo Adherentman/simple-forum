@@ -12,18 +12,16 @@
     "@types/koa": "^2.0.43",
     "@types/koa-bodyparser": "^4.2.0",
     "@types/koa-router": "^7.0.27",
-    "@types/mongoose": "^4.7.33",
-    "typescript": "^2.6.2"
+    "@types/mongodb": "^3.0.5",
+    "typescript": "^2.7.1"
   },
   "dependencies": {
-    "apollo-connector-mongodb": "^1.1.18",
     "apollo-server-koa": "^1.3.2",
     "graphql": "^0.12.3",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.3.0",
     "lodash": "^4.17.4",
-    "mongo-factory": "^1.0.0",
-    "mongoose": "^5.0.1"
+    "mongodb": "^3.0.2"
   }
 }
