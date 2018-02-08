@@ -1,5 +1,4 @@
 import * as mongoose from 'mongoose';
-// import { modelToType } from 'mongoose-graphql';
 
 interface IBook extends mongoose.Document {
   title: string;
