@@ -12,6 +12,6 @@ export class BookActions implements ActionCreatorsMapObject {
   [key: string]: ActionCreator<any>;
 }
 
-export const bookActions = {
+export const bookActions: BookActions = {
   AddTodo,
 }

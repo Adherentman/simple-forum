@@ -1,25 +1,32 @@
 import * as React from 'react';
+import * as Immutable from 'immutable';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { bookActions, BookActions } from '../actions/bookAction'; 
-import '../style.scss';
 
+import '../style.scss';
+import { bookActions, BookActions } from '../actions/bookAction';
 import Cards from '../components/Card';
 
-interface AppProps{
-  text: any
-  actions: BookActions
+interface stateType{
+  book: Immutable.Map<string,any>
 }
 
-interface AppStates{
+interface AppProps {
+  text: Immutable.List<Immutable.Map<string, any>>;
+  actions: BookActions;
+}
+
+interface AppStates {
 }
 class App extends React.Component<AppProps, AppStates> {
-  
+
   componentDidMount() {
     var actions = this.props.actions;
     actions.AddTodo()
   }
   render() {
+
+    var text: Immutable.List<Immutable.Map<string, any>> = this.props.text;
 
     return (
       <div className="App">
@@ -28,18 +35,11 @@ class App extends React.Component<AppProps, AppStates> {
     );
   }
 }
-function mapStateToProps(state: any) {
-  return { text: state };
-}
 
-function mapDispatchToProps(dispatch: any) {
-  return { actions: bindActionCreators(bookActions, dispatch) };
-}
-
-export default connect((state: any) =>{
+export default connect((state: stateType) => {
   return {
-    text: state.text
+    text: state.book.get('text')
   };
-}, (dispatch: any) => ({
-  actions: bindActionCreators(bookActions, dispatch) 
+}, (dispatch) => ({
+  actions: bindActionCreators(bookActions, dispatch)
 }))(App);
