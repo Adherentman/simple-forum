@@ -20,23 +20,26 @@ MongoClient.connect(env.MongoDbUrl, (res: any) => {
   console.log('Mongodb server is run: ' + env.MongoDbUrl);
 });
 
-router.post('/graphql', graphqlKoa({
-  schema,
+router.post(
+  '/graphql',
+  graphqlKoa({
+    schema,
   })
 );
 
-router.get('/graphiql',
+router.get(
+  '/graphiql',
   graphiqlKoa({
-    endpointURL: '/graphql'
-  }
-));
+    endpointURL: '/graphql',
+  })
+);
 
-router.get('/404', async (ctx) => {
-  ctx.body = '404!!!'
+router.get('/404', async ctx => {
+  ctx.body = '404!!!';
 });
 
 // 加载koa路由中间件
 app.use(router.routes()).use(router.allowedMethods());
 
 app.listen(port);
-console.log("Server is running at port " + port);
+console.log('Server is running at port ' + port);

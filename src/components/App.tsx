@@ -7,8 +7,8 @@ import '../style.scss';
 import { bookActions, BookActions } from '../actions/bookAction';
 import Cards from '../components/Card';
 
-interface stateType{
-  book: Immutable.Map<string,any>
+interface stateType {
+  book: Immutable.Map<string, any>;
 }
 
 interface AppProps {
@@ -16,16 +16,13 @@ interface AppProps {
   actions: BookActions;
 }
 
-interface AppStates {
-}
+interface AppStates {}
 class App extends React.Component<AppProps, AppStates> {
-
   componentDidMount() {
     var actions = this.props.actions;
-    actions.AddTodo()
+    actions.AddTodo();
   }
   render() {
-
     var text: Immutable.List<Immutable.Map<string, any>> = this.props.text;
 
     return (
@@ -36,10 +33,13 @@ class App extends React.Component<AppProps, AppStates> {
   }
 }
 
-export default connect((state: stateType) => {
-  return {
-    text: state.book.get('text')
-  };
-}, (dispatch) => ({
-  actions: bindActionCreators(bookActions, dispatch)
-}))(App);
+export default connect(
+  (state: stateType) => {
+    return {
+      text: state.book.get('text'),
+    };
+  },
+  dispatch => ({
+    actions: bindActionCreators(bookActions, dispatch),
+  })
+)(App);

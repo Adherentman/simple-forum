@@ -6,15 +6,12 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import book from './book';
 
 const reducers = combineReducers({
-  book
+  book,
 });
 
 const store = createStore(
   reducers,
-  composeWithDevTools(applyMiddleware(
-    thunkMiddleware,
-    loggerMiddleware
-  ))
-)
+  composeWithDevTools(applyMiddleware(thunkMiddleware, loggerMiddleware))
+);
 
 export default store;

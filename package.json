@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "format": "prettier --write '**/*.{tsx,ts,css,md}'"
   },
   "devDependencies": {
     "@types/immutable": "^3.8.7",
@@ -24,6 +25,7 @@
     "koa-convert": "^1.2.0",
     "koa-webpack-middleware": "^1.0.7",
     "node-sass": "^4.7.2",
+    "prettier": "^1.10.2",
     "react-hot-loader": "^4.0.0-beta.6",
     "redux-devtools-extension": "^2.13.2",
     "sass-loader": "^6.0.6",
