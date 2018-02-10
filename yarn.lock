@@ -5491,14 +5491,6 @@ react-stand-in@^4.0.0-beta.6:
   version "4.0.0-beta.6"
   resolved "http://registry.npm.taobao.org/react-stand-in/download/react-stand-in-4.0.0-beta.6.tgz#6dd28cc11665a1a51e4dbbb248bc3e1c77e93add"
 
-react-test-renderer@^16.2.0:
-  version "16.2.0"
-  resolved "https://registry.npmjs.org/react-test-renderer/-/react-test-renderer-16.2.0.tgz#bddf259a6b8fcd8555f012afc8eacc238872a211"
-  dependencies:
-    fbjs "^0.8.16"
-    object-assign "^4.1.1"
-    prop-types "^15.6.0"
-
 react@^16.2.0:
   version "16.2.0"
   resolved "http://registry.npm.taobao.org/react/download/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
