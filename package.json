@@ -11,7 +11,7 @@
   },
   "jest": {
     "roots": [
-    "<rootDir>/src/"
+      "<rootDir>/src/"
     ],
     "moduleFileExtensions": [
       "ts",
@@ -19,7 +19,8 @@
       "js"
     ],
     "transform": {
-      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+      "\\.(css|scss)$": "<rootDir>/node_modules/jest-css-modules"
     },
     "testRegex": "/*.(test|spec).(ts|tsx|js)$"
   },
@@ -39,11 +40,13 @@
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.2.2",
+    "jest-css-modules": "^1.1.0",
     "koa-convert": "^1.2.0",
     "koa-webpack-middleware": "^1.0.7",
     "node-sass": "^4.7.2",
     "prettier": "^1.10.2",
     "react-hot-loader": "^4.0.0-beta.6",
+    "react-test-renderer": "^16.2.0",
     "redux-devtools-extension": "^2.13.2",
     "sass-loader": "^6.0.6",
     "source-map-loader": "^0.2.3",
