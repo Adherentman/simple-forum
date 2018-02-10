@@ -8,7 +8,9 @@ const AddTodo = (text: string) => (dispatch: any) => {
 };
 
 export class BookActions implements ActionCreatorsMapObject {
-  AddTodo: ActionCreator<any>;
+  constructor(){
+    this.AddTodo();
+  }
   [key: string]: ActionCreator<any>;
 }
 
