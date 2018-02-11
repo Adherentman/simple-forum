@@ -7,7 +7,6 @@ import { ApolloClient } from 'apollo-client';
 import { store, client } from './env';
 import App from './components/App';
 
-
 ReactDOM.render(
   <ApolloProvider client={client}>
     <Provider store={store}>

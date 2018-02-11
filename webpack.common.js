@@ -39,8 +39,9 @@ module.exports = {
     },
     //所有输出的'.js'文件都会通过'source-map-loader'重新处理.
     {
-      enforce: "pre", test: /\.js$/,
-      loader: "source-map-loader"
+      enforce: "pre", test: /\.ts$/,
+      loader: "source-map-loader",
+      exclude: [/node_modules/, /build/, /__test__/],
     },
     //scss配置
     {

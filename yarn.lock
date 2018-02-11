@@ -14,6 +14,10 @@
   version "2.0.47"
   resolved "https://registry.npmjs.org/@types/async/-/async-2.0.47.tgz#f49ba1dd1f189486beb6e1d070a850f6ab4bd521"
 
+"@types/graphql@^0.12.3":
+  version "0.12.3"
+  resolved "http://registry.npm.taobao.org/@types/graphql/download/@types/graphql-0.12.3.tgz#c429585aaa4523135e0ab4e12dec72d2d913946f"
+
 "@types/immutable@^3.8.7":
   version "3.8.7"
   resolved "http://registry.npm.taobao.org/@types/immutable/download/@types/immutable-3.8.7.tgz#536d33d30f3f3d9a6d4642a219419fd82af633fb"
@@ -24,9 +28,9 @@
   version "22.1.2"
   resolved "https://registry.npmjs.org/@types/jest/-/jest-22.1.2.tgz#813a79ec98221633845627636dbc606f31220dbc"
 
-"@types/lodash@^4.14.91":
-  version "4.14.91"
-  resolved "http://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.91.tgz#794611b28056d16b5436059c6d800b39d573cd3a"
+"@types/lodash@^4.14.102":
+  version "4.14.102"
+  resolved "http://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.102.tgz#586a3e22385fc79b07cef9c5a1c8a5387986fbc8"
 
 "@types/node@*":
   version "8.5.2"
@@ -3922,7 +3926,7 @@ lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.5, lodash@^4.17.2, lodash@^4.17.3, l
   version "4.17.4"
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
-lodash@^4.13.1, lodash@^4.2.0, lodash@^4.2.1:
+lodash@^4.13.1, lodash@^4.17.5, lodash@^4.2.0, lodash@^4.2.1:
   version "4.17.5"
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 

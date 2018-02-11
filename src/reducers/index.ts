@@ -9,5 +9,4 @@ const reducers = combineReducers({
   book,
 });
 
-
 export default reducers;
