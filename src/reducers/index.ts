@@ -9,9 +9,5 @@ const reducers = combineReducers({
   book,
 });
 
-const store = createStore(
-  reducers,
-  composeWithDevTools(applyMiddleware(thunkMiddleware, loggerMiddleware))
-);
 
-export default store;
+export default reducers;
