@@ -7,9 +7,7 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   //开发中Server
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
     hot: true,
-    port: 5555
+    contentBase: path.join(__dirname, "./dist"),
   },
 });

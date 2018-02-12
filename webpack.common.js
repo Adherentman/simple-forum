@@ -7,8 +7,7 @@ module.exports = {
   //入口
   entry: [
     'react-hot-loader/patch',
-    'webpack-dev-server/client',
-    'webpack/hot/only-dev-server',
+    'webpack-hot-middleware/client',
     path.resolve(__dirname, 'src/index.tsx'),
   ],
   //输出

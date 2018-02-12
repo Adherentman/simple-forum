@@ -1,6 +1,7 @@
 import * as React from 'react';
 import '../style.scss';
 import Cards from '../components/Card';
+import gql from 'graphql-tag';
 
 interface AppProps {}
 interface AppStates {}
@@ -13,3 +14,11 @@ export default class App extends React.Component<AppProps, AppStates> {
     );
   }
 }
+const query = gql`
+  {
+    books{
+      title
+    }
+  }
+`
+console.log(query)
