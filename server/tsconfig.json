@@ -9,6 +9,7 @@
       "es2015",
       "esnext.asynciterable"
     ],                             /* Specify library files to be included in the compilation:  */
+    "jsx": "react",
     "types": ["jasmine"],                           /* Type declaration files to be included in compilation. */
   },
   "exclude": [

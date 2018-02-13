@@ -40,7 +40,7 @@ class Cards extends React.Component<CardsProps, CardsState> {
           style={gridStyle}
         >
           <Meta
-            title="Thank you for using!"
+            title="Thank you for using!!!!"
             description="if you don't like ant desgin, you can use:"
           />
           <code>yarn remove antd</code>

@@ -63,13 +63,10 @@
   },
   "dependencies": {
     "antd": "^3.1.0",
-    "apollo-client-preset": "^1.0.8",
     "graphql": "^0.13.0",
-    "graphql-tag": "^2.7.3",
     "immutable": "^3.8.2",
     "lodash": "^4.17.5",
     "react": "^16.2.0",
-    "react-apollo": "^2.0.4",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
