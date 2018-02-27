@@ -12,14 +12,6 @@ const myMongoDb = new Promise((resolve, reject) => {
 // The resolvers
 export const resolvers = {
   Query: {
-    // books: () => new Promise((res, rej) => {
-    //   MongoClient.connect(env.MongoDbUrl, async (err, database: any) => {
-    //     const myAwesomeDB = await database.db('test');
-    //     const col = myAwesomeDB.collection('book');
-    //     var doc = await col.find().toArray();
-    //     res(doc);
-    //   })
-    // })
     books: async function() {
       let db: any = await myMongoDb;
       const col = db.collection('book');
