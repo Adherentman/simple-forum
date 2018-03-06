@@ -1,18 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { ApolloClient, gql, HttpLink, InMemoryCache} from 'apollo-boost';
+import { ApolloClient, gql, HttpLink, InMemoryCache, ApolloLink} from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
-import { store } from './env';
+import { store, client } from './env';
 import App from './components/App';
 
-const client = new ApolloClient({
-  link: new HttpLink({ uri: 'http://loalhost:8088/graphql' }),
-  cache: new InMemoryCache()
-});
 
-client.query({query: gql`{query{books{title}}}`}).then(console.log);
+client.query({query: gql`{books{title}}`}).then(console.log);
 
 ReactDOM.render(
     <Provider store={store}>
