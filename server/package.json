@@ -13,6 +13,7 @@
     "@types/koa-bodyparser": "^4.2.0",
     "@types/koa-router": "^7.0.27",
     "@types/koa-static": "^4.0.0",
+    "@types/lodash": "^4.14.107",
     "@types/mongodb": "^3.0.5",
     "@types/prop-types": "^15.5.2",
     "@types/webpack": "^3.8.5",
