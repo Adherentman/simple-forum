@@ -28,9 +28,9 @@
   version "22.1.2"
   resolved "https://registry.npmjs.org/@types/jest/-/jest-22.1.2.tgz#813a79ec98221633845627636dbc606f31220dbc"
 
-"@types/lodash@^4.14.102":
-  version "4.14.102"
-  resolved "http://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.102.tgz#586a3e22385fc79b07cef9c5a1c8a5387986fbc8"
+"@types/lodash@^4.14.107":
+  version "4.14.107"
+  resolved "http://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.107.tgz#b2d2ae3958bfb8ff828495cbe12214af9e4d035e"
 
 "@types/node@*":
   version "8.5.2"
