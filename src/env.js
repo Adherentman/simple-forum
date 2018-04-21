@@ -1,10 +1,10 @@
-import { createStore, applyMiddleware } from 'redux';
-import thunkMiddleware from 'redux-thunk';
-import loggerMiddleware from 'redux-logger';
-import { composeWithDevTools } from 'redux-devtools-extension';
+// import { createStore, applyMiddleware } from 'redux';
+// import thunkMiddleware from 'redux-thunk';
+// import loggerMiddleware from 'redux-logger';
+// import { composeWithDevTools } from 'redux-devtools-extension';
 import { ApolloClient, gql, HttpLink, InMemoryCache, ApolloLink} from 'apollo-boost';
 
-import reducers from './reducers/index';
+// import reducers from './reducers/index';
 
 import { onError } from "apollo-link-error";
 
@@ -33,8 +33,9 @@ export const client = new ApolloClient({
   link,
   cache: new InMemoryCache()
 });
-export const store = createStore(
-  reducers,
-  composeWithDevTools(applyMiddleware(thunkMiddleware, loggerMiddleware))
-);
+
+// export const store = createStore(
+//   reducers,
+//   composeWithDevTools(applyMiddleware(thunkMiddleware, loggerMiddleware))
+// );
 

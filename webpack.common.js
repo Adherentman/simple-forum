@@ -8,7 +8,7 @@ module.exports = {
   entry: [
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',
-    path.resolve(__dirname, 'src/index.tsx'),
+    path.resolve(__dirname, 'src/index.js'),
   ],
   //输出
   output: {
@@ -27,15 +27,22 @@ module.exports = {
   ],
   //解析
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"]
+    extensions: ["", ".js"]
   },
   //模块
   module: {
-    rules: [{
-      test: /\.ts|\.tsx$/,
-      use: 'awesome-typescript-loader',
-      include: __dirname,
-    },
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            babelrc: false,
+          }
+        }
+      },
     //所有输出的'.js'文件都会通过'source-map-loader'重新处理.
     {
       enforce: "pre", test: /\.ts$/,
