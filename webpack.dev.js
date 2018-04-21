@@ -5,6 +5,7 @@ const common = require('./webpack.common.js');
 //开发环境
 const devConfig = merge(common, {
   devtool: 'inline-source-map',
+  mode: 'development',
   //开发中Server
   devServer: {
     hot: true,

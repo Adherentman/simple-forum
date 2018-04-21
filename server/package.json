@@ -7,29 +7,29 @@
     "server-start": "tsc && node bld/index.js"
   },
   "devDependencies": {
-    "@types/graphql": "^0.12.2",
-    "@types/jasmine": "^2.8.5",
-    "@types/koa": "^2.0.43",
+    "@types/graphql": "^0.13.0",
+    "@types/jasmine": "^2.8.6",
+    "@types/koa": "^2.0.45",
     "@types/koa-bodyparser": "^4.2.0",
     "@types/koa-router": "^7.0.27",
     "@types/koa-static": "^4.0.0",
     "@types/lodash": "^4.14.107",
-    "@types/mongodb": "^3.0.5",
+    "@types/mongodb": "^3.0.15",
     "@types/prop-types": "^15.5.2",
-    "@types/webpack": "^3.8.5",
+    "@types/webpack": "^4.1.3",
     "koa-convert": "^1.2.0",
     "koa-webpack-middleware": "^1.0.7",
-    "typescript": "^2.7.1"
+    "typescript": "^2.8.3"
   },
   "dependencies": {
-    "apollo-server-koa": "^1.3.2",
-    "graphql": "^0.12.3",
-    "graphql-tools": "^2.20.2",
-    "koa": "^2.4.1",
+    "apollo-server-koa": "^1.3.5",
+    "graphql": "^0.13.2",
+    "graphql-tools": "^2.24.0",
+    "koa": "^2.5.0",
     "koa-bodyparser": "^4.2.0",
-    "koa-router": "^7.3.0",
+    "koa-router": "^7.4.0",
     "koa-static": "^4.0.2",
-    "lodash": "^4.17.4",
-    "mongodb": "^3.0.2"
+    "lodash": "^4.17.5",
+    "mongodb": "^3.0.7"
   }
 }
